@@ -85,7 +85,7 @@ type
   (** Type defining the callback function for evaluating the value of
    *  the objective function.  Return value should be set to false if
    *  there was a problem doing the evaluation. *)
-  Eval_F_CB = function(n: Integer; x: PNumber; user_data: UserDataPtr): Bool; cdecl;
+  Eval_F_CB = function(n: Integer; x: PNumber; new_x: Bool; obj_value: PNumber; user_data: UserDataPtr): Bool; cdecl;
 
   (** Type defining the callback function for evaluating the gradient of
    *  the objective function.  Return value should be set to false if
